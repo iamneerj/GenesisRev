@@ -1,0 +1,49 @@
+<ion-view class="upcoming-session-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Upcoming Sessions</span>
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-loop" ng-click="upsessCtrl.refreshCourses()"></button>
+  </ion-nav-buttons>
+  <ion-content class="view-content">
+    <div class="row no_pad">
+      <!-- <div class="col col-33 no_pad">
+        <button class="button button-assertive" ng-click="upsessCtrl.refreshCourses()">Refresh</button>
+      </div> -->
+      <div class="col col-100">
+        <span><b>Last Updated:</b> {{lastUpdated}}</span>
+      </div>
+    </div> 
+    <br>
+    <div class="course-detail" ng-repeat="item in upcomingSessions">
+        <div class="row">
+          <div class="table-head col col-50">Course</div>
+          <div class="table-head col col-50">Session</div>
+        </div>
+        <div class="row">
+          <div class="col col-50" ng-bind="item.course_name"></div>
+          <div class="col col-50" ng-bind="item.name.value"></div>
+        </div>
+        <div class="row">
+          <div class="table-head col col-50">Date</div>
+          <div class="table-head col col-25">Time</div>
+          <div class="table-head col col-25">Duration</div>
+        </div>
+        <div class="row">
+          <div class="col col-50" ng-bind="item.dateStart"></div>
+          <div class="col col-25" ng-bind="item.time_start"></div>
+          <div class="col col-25" ng-bind="item.duration"></div>
+        </div>
+        <div class="row">
+          <div class="table-head col col-50">Location</div>
+        </div>
+        <div class="row">
+          <div class="col col-50" ng-bind="item.location.value"></div>
+        </div>
+      </div>
+    
+  </ion-content>
+</ion-view>

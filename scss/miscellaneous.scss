@@ -1,0 +1,117 @@
+.miscellaneous-view {
+	.miscellaneous-functionalities
+	{
+		.item .icon:first-child
+		{
+			color: $miscellaneous-icon-color;
+		}
+
+		.item .title
+		{
+			font-weight:500;
+		}
+
+		.item .description
+		{
+			color: darken($stable, 30%);
+		}
+	}
+}
+
+.view-content {
+		padding: 10px;
+		margin: 5px;
+}
+
+.list {
+	.item.item-accordion {
+	  line-height: 38px;
+	  padding-top: 0;
+	  padding-bottom: 0;
+	  transition: 0.09s all linear;
+	} 
+	
+	.item.item-accordion.ng-hide {
+	  line-height: 0px;
+	}
+	
+	.item.item-accordion.ng-hide-add,
+  .item.item-accordion.ng-hide-remove {
+	  display: block !important;
+	}
+}
+
+.heading {
+  /* height: 32px; */
+  line-height: 32px;
+  padding-left: 10px;
+  margin: 10px 0px 10px 0px;
+  color: #3bfe97;
+  font-size: 1.2em;
+  background: -moz-linear-gradient(left, rgba(48, 48, 48, 0.8) 0%,
+ rgba(10, 10, 10, 1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(48, 48
+ , 48, 0.8)), color-stop(100%, rgba(10, 10, 10, 1)));
+  background: -webkit-linear-gradient(left, rgba(48, 48, 48, 0.8) 0%,
+ rgba(10, 10, 10, 1) 100%);
+  background: -o-linear-gradient(left, rgba(48, 48, 48, 0.8) 0%,
+ rgba(10, 10, 10, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(48, 48, 48, 0.8) 0%,
+ rgba(10, 10, 10, 1) 100%);
+  background: linear-gradient(to right, rgba(48, 48, 48, 0.8) 0%,
+ rgba(10, 10, 10, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( 
+ startColorstr='#cc303030', endColorstr='#0a0a0a',
+ GradientType=1);
+}
+
+.no_pad {
+	padding: 0 !important;
+}
+
+.no_pad_right {
+	padding-right: 0 !important;
+}
+
+.no_pad_left {
+	padding-left: 0 !important;
+}
+
+.no_margin {
+	margin: 0 !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.text-danger {
+  color: #a94442;
+}
+
+a.item-content {
+	text-decoration: none;
+}
+
+.border-bottom{
+	border-bottom: 1px solid;
+}
+
+.table-head {
+	font-weight: bold;
+  text-align: left;
+}  

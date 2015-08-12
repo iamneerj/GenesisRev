@@ -1,0 +1,35 @@
+{
+  "name": "GenesisApp",
+  "version": "0.0.1",
+  "description": "Genesis Mobile App",
+  "dependencies": {
+    "gulp": "^3.5.6",
+    "gulp-sass": "~2.0.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-copy": "~0.0.2",
+    "async": "^0.9.0",
+    "bower": "^1.3.3",
+    "gulp-angular-templatecache": "^1.5.0",
+    "gulp-util": "^2.2.14",
+    "jshint": "^2.6.3",
+    "shelljs": "^0.3.0"
+  },
+  "devDependencies": {},
+  "cordovaPlugins": [
+    "com.google.cordova.admob",
+    "com.google.playservices",
+    "com.rjfun.cordova.iad",
+    "com.synconset.imagepicker",
+    "https://github.com/katzer/cordova-plugin-email-composer.git",
+    "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.geolocation",
+    "org.apache.cordova.globalization",
+    "org.apache.cordova.inappbrowser",
+    "org.pushandplay.cordova.apprate",
+    "https://github.com/phonegap-build/PushPlugin.git",
+    "nl.x-services.plugins.socialsharing"
+  ]
+}

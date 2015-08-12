@@ -1,0 +1,76 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content class="post-size-14px">
+    <ion-nav-bar class="bar app-top-bar">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" class="main-menu" expose-aside-when="large">
+    <ion-content>
+      <ion-list>
+        <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="app.home">
+          <img ng-src="img/userlogo.png">
+          <h2 class="greeting">Welcome</h2>
+          <p class="message" ng-bind="userDetails.name_value_list.account_name.value"></p>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.home">
+          <i class="icon ion-home"></i>
+          <h2 class="menu-text">Home</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.upcomingsessions">
+          <i class="icon ion-bookmark"></i>
+          <h2 class="menu-text">Upcoming sessions</h2>
+        </ion-item>
+        <!-- <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.home">
+          <i class="icon ion-compose"></i>
+          <h2 class="menu-text">Attendance marking</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.mycourses">
+          <i class="icon ion-social-wordpress"></i>
+          <h2 class="menu-text">Tickets</h2>
+        </ion-item> -->
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.latestmessage">
+          <i class="icon ion-email-unread"></i>
+          <h2 class="menu-text">Latest messages</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.mycourses">
+          <i class="icon ion-calendar"></i>
+          <h2 class="menu-text">Courses schedule</h2>
+        </ion-item>
+        <!-- <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.mycourses">
+          <i class="icon ion-document-text"></i>
+          <h2 class="menu-text">Feedback forms</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.mycourses">
+          <i class="icon ion-gear-a"></i>
+          <h2 class="menu-text">e-Learning web portal</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.mycourses">
+          <i class="icon ion-android-person"></i>
+          <h2 class="menu-text">Personal profile</h2>
+        </ion-item>
+        <ion-item class="item-icon-left" nav-clear menu-close ui-sref="app.mycourses">
+          <i class="icon ion-gear-a"></i>
+          <h2 class="menu-text">Settings</h2>
+        </ion-item> -->
+<!--         <ion-item class="item-icon-left" nav-clear menu-close  ng-click="logout()">
+          <i class="icon ion-power"></i>
+          <h2 class="menu-text">Sign out</h2>
+        </ion-item> -->
+        <ion-item class="item-icon-left item item-complex" nav-clear menu-close ng-click="logout()">
+          <a class="item-content" href="">
+            <i class="icon ion-power"></i>
+            <h2 class="menu-text">Sign out</h2>
+          </a>
+        </ion-item>
+
+    </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

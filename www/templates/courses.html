@@ -1,0 +1,25 @@
+<ion-view class="my-courses-view">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-nav-title>
+    <span>Courses Schedule</span>
+  </ion-nav-title>
+  <ion-content class="view-content">
+    <p class="heading course-title">My courses schedule</p>
+    <br>
+    <div class="list courses-list">
+      <div ng-repeat="course in courses" class="item item-icon-right">
+           <a href="" ng-click="coursesCtrl.downloadSchedule(course[0].id.value)">
+            <span class="thumbnail badge badge-assertive">PDF</span>
+           </a> 
+           <div ng-click="coursesCtrl.openDetailModal(course[0].id.value, course[0].name.value, course[0].provisional_c.value)">
+                <div>
+                  <p class="description">{{course[0].name.value}}</p>
+                </div>
+                  <i class="icon ion-ios-arrow-right"></i>
+           </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

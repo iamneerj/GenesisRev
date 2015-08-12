@@ -1,0 +1,21 @@
+<ion-view class="home-view">
+  <ion-nav-title>
+    <span>Latest Messages</span>
+  </ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="view-content">
+    <p class="heading">Latest Messages</p>
+    <div class="row">
+      <div class="table-head col col-33">Name</div>
+      <div class="table-head col col-67">Description</div>
+    </div>
+    <div ng-repeat="item in notifications">
+      <div class="row" >
+        <div class="col col-33" ng-bind="item.name_value_list.name.value"></div>
+        <div class="col col-67" ng-bind="item.name_value_list.description.value"></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
