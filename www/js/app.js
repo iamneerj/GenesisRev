@@ -26,7 +26,7 @@ angular.module('GenesisApp', ['ionic',
                               'angular-md5',
                               'httpInterceptor'])
 
-.run(function($ionicPlatform, PushNotificationsService, $state, SessionService,PushRegistrationService) {
+.run(function($ionicPlatform, PushNotificationsService, $state, SessionService,PushRegistrationService, $rootScope) {
 
 	$ionicPlatform.on("deviceready", function(){
 		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -58,16 +58,29 @@ angular.module('GenesisApp', ['ionic',
 //		PushNotificationsService.register();
 //	});
 	
-	if(localStorage.getItem('sessionId') && localStorage.getItem('userContactId')){
-		$state.go('app.home');
-	}else{
-		$state.go('login');
-	}
+	$rootScope.clearLocalStorage = function(){
+		localStorage.removeItem('sessionId');
+		localStorage.removeItem('userContactId');
+		localStorage.removeItem('userDetails');
+		localStorage.removeItem('courseDetails');
+		localStorage.removeItem('lastUpdatedSchedule');
+		localStorage.removeItem('lastUpdatedSessions');
+		localStorage.removeItem('mycourses');
+		localStorage.removeItem('mycoursesDetails');
+		localStorage.removeItem('mycoursesSessions');
+	};
+	
+//	if(localStorage.getItem('sessionId') && localStorage.getItem('userContactId')){
+//		$state.go('app.home');
+//	}else{
+//		$state.go('login');
+//	}
 	
 })
 
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+	$ionicConfigProvider.views.maxCache(0);
 	$stateProvider
 
 //	.state('walkthrough', {

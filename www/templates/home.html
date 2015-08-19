@@ -5,32 +5,24 @@
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-  <ion-content class="view-content">
-    <p class="heading">Latest Notification</p>
-    <div class="row">
-      <div class="table-head col col-33">Name</div>
-      <div class="table-head col col-67">Description</div>
-    </div>
-    <div ng-repeat="item in notifications">
-      <div class="row" >
-        <div class="col col-33" ng-bind="item.name_value_list.name.value"></div>
-        <div class="col col-67" ng-bind="item.name_value_list.description.value"></div>
+  <ion-content class="view-content" ng-cloak>
+  	<div ng-if="notifications.length > 0">
+      <p class="heading">Latest Notification</p>
+      <div class="list card no_margin">
+        <a href="#" class="item" ng-repeat="item in notifications">
+          <h2 ng-bind="item.name_value_list.name.value"></h2>
+          <p ng-bind="item.name_value_list.description.value"></p>
+        </a>
       </div>
+      <br>
     </div>
-    <br>
     <div ng-if="upcomingSession.length > 0">
       <p class="heading">Upcoming Sessions</p>
-      <div class="row">
-        <div class="table-head col col-50">Session</div>
-        <div class="table-head col col-25">Date</div>
-        <div class="table-head col col-25">Time</div>
-      </div>
-      <div  ng-repeat="item in upcomingSession">
-        <div class="row">
-          <div class="col col-50" ng-bind="item.name.value"></div>
-          <div class="col col-25" ng-bind="item.dateStart"></div>
-          <div class="col col-25" ng-bind="item.time_start"></div>
-        </div>
+      <div class="list card no_margin">
+        <a href="#" class="item" ng-repeat="item in upcomingSession">
+          <h2 ng-bind="item.name.value"></h2>
+          <p>{{item.dateStart}} at {{item.time_start}}</p>
+        </a>
       </div>
     </div>
   </ion-content>

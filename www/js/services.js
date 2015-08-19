@@ -1,6 +1,6 @@
 angular.module('GenesisApp.services', [])
 
-.service('NetworkService', function ($http, $q, $ionicPopup, $state){
+.service('NetworkService', function ($http, $q, $ionicPopup, $state, $rootScope){
 	function jQueryLikeParamSerializer(params) {
 		if (!params) return '';
 		var parts = [];
@@ -70,11 +70,7 @@ angular.module('GenesisApp.services', [])
 					title: 'Error',
 					template: 'Session has been expired.'
 				}).then(function(){
-					localStorage.removeItem('sessionId');
-					localStorage.removeItem('userContactId');
-					localStorage.removeItem('userDetails');
-					localStorage.removeItem('courseDetails');
-					localStorage.removeItem('lastUpdated');
+					$rootScope.clearLocalStorage();
 					$state.go("login");
 				});
 			}else{

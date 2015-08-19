@@ -81,6 +81,14 @@
 	margin: 0 !important;
 }
 
+.no_margin_right {
+	margin-right: 0 !important;
+}
+
+.no_margin_left {
+	margin-left: 0 !important;
+}
+
 .pull-right {
   float: right !important;
 }
@@ -115,3 +123,10 @@ a.item-content {
 	font-weight: bold;
   text-align: left;
 }  
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

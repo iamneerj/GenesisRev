@@ -7,33 +7,35 @@
         </span></button>
       <h1 class="title">Detailed Schedule</h1>
     </ion-header-bar>
-    <ion-content class="view-content ui-schedule">
+    <ion-content class="view-content ui-schedule" ng-cloak>
       <h4 class="text-danger" ng-bind="seletedCourse"></h4>
       <br>
       <div class="table-head">Start date: {{otherDetails.date_start_c.value}}</div>
       <div class="table-head">End date: {{otherDetails.date_end_c.value}}</div>
       <div class="table-head">No of Days: {{otherDetails.number_of_sessions_c.value}}</div>
       <br>
-      <div class="course-detail" ng-repeat="item in courseDetails">
-        <div class="row">
-          <div class="table-head col col-25">No.</div>
-          <div class="table-head col col-25">Date</div>
-          <div class="table-head col col-50">Session</div>
-        </div>
-        <div class="row">
-          <div class="col col-25" ng-bind="item.sequence_no"></div>
-          <div class="col col-25" ng-bind="item.dateStart"></div>
-          <div class="col col-50" ng-bind="item.name.value"></div>
-        </div>
-        <div class="row">
-          <div class="table-head col col-25">Time</div>
-          <div class="table-head col col-25">Duration</div>
-          <div class="table-head col col-50">Location</div>
-        </div>
-        <div class="row">
-          <div class="col col-25" ng-bind="item.time_start"></div>
-          <div class="col col-25" ng-bind="item.duration"></div>
-          <div class="col col-50" ng-bind="item.location.value"></div>
+      <div class="card no_margin_right no_margin_left" ng-repeat="item in courseDetails">
+        <div class="item item-text-wrap no_pad" >
+          <div class="row">
+            <div class="table-head col col-25">No.</div>
+            <div class="table-head col col-25">Date</div>
+            <div class="table-head col col-50">Session</div>
+          </div>
+          <div class="row">
+            <div class="col col-25" ng-bind="item.sequence_no"></div>
+            <div class="col col-25" ng-bind="item.dateStart"></div>
+            <div class="col col-50" ng-bind="item.name.value"></div>
+          </div>
+          <div class="row">
+            <div class="table-head col col-25">Time</div>
+            <div class="table-head col col-25">Duration</div>
+            <div class="table-head col col-50">Location</div>
+          </div>
+          <div class="row">
+            <div class="col col-25" ng-bind="item.time_start"></div>
+            <div class="col col-25" ng-bind="item.duration"></div>
+            <div class="col col-50" ng-bind="item.location.value"></div>
+          </div>
         </div>
       </div>
     </ion-content>
